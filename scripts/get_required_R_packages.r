@@ -30,3 +30,4 @@ BiocManager::install("org.Mm.eg.db", ask=FALSE)
 
 BiocManager::install("rtracklayer", ask=FALSE)
 BiocManager::install("GenomicFeatures", ask=FALSE)
+BiocManager::install("txdbmaker", ask=FALSE)
