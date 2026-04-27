@@ -54,7 +54,7 @@ exons_by_gene <- exonsBy(txdb, by = "gene")
 # Compute gene lengths (sum of non-overlapping exons)
 gene_lengths <- sum(width(reduce(exons_by_gene)))
 # if we removed the subversions from the ENSEMBL ids, we also need to remove them from the ones imported
-# from the .gtf file, otherwise matsh() will fail: 
+# from the .gtf file, otherwise match() will fail: 
 names(gene_lengths) <- sub("\\..*", "", names(gene_lengths))
 
 # Convert to data.frame
