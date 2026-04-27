@@ -36,22 +36,6 @@ dds <- DESeqDataSetFromMatrix(
 	tidy=TRUE
 )
 
-# this actually runs the analysis
-des <- DESeq(dds)
-
-# this is needed to produce a readable results table
-res = results(des)
-res <- res[order(res$padj), ]
-
-# saving the results
-write.csv(res, "DESeq_results.csv")
-
-# saving the results with gene symbols added
-data <- read.csv("DESeq_results.csv") # this must have been processed to remove subversions from Ensembl ids!
-my_data <- convert_ensembl_to_symbol(data, "X")
-write.csv(my_data, file = "DESeq_results.csv", row.names = FALSE)
-
-
 # this writes down the normalized counts
 dds <- estimateSizeFactors(dds)
 sizeFactors(dds)
