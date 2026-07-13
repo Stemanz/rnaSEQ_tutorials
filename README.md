@@ -1,2 +1,2 @@
 # rnaSEQ_tutorials
-Code snippets, notebooks and useful in support of the RNAseq course
+Code snippets, notebooks and useful stuff in support of the RNAseq course
